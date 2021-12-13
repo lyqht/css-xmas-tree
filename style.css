@@ -15,7 +15,115 @@ h1 {
     height: 700px;
     border: dashed 3px #ccc;
     border-radius: 1rem;
+    display: grid;
+    place-items: center;
 }
 
 .xmas-tree {
+    display: grid;
+    place-items: center;
+    padding: 10vw;
+    transform: scale(200%);
+}
+
+/* for ordering the tree components */
+
+.outline-wrapper:nth-child(1) {
+    z-index: 10;
+}
+.outline-wrapper:nth-child(2) {
+    z-index: 9;
+}
+.outline-wrapper:nth-child(3) {
+    z-index: 8;
+}
+.outline-wrapper:nth-child(4) {
+    z-index: 7;
+}
+.outline-wrapper:nth-child(5) {
+    z-index: 6;
+}
+
+/* for styling the tree components */
+
+.outline-wrapper {
+    filter: drop-shadow(0px 0px 2px rgba(39, 39, 39, 0.801));
+}
+
+.xmas-star {
+    background: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    height: 32px;
+    width: 32px;
+    margin: -16px;
+}
+
+#first-layer {
+    margin-top: 0px;
+}
+
+.xmas-tree-cone {
+    clip-path: polygon(50% 0%, 0% 80%, 28% 70%, 25% 80%, 50% 73%, 77% 80%, 75% 70%, 100% 80%);
+    background: green;
+    height: 150px;
+    width: 150px;
+    margin: -55px;
+}
+
+.xmas-tree-bark {
+    height: 40px;
+    width: 30px;
+    background: brown;
+}
+
+/* for styling the decos */
+
+.decos {
+    /* position: absolute; */
+    z-index: 1000;
+}
+
+.deco-ball {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.801));
+}
+
+.red {
+    background: red;
+}
+
+.blue {
+    background: rgb(79, 208, 218);
+}
+
+.yellow {
+    background: yellow;
+}
+
+#deco-ball-1 {
+    top: 195px;
+    left: 170px;
+}
+
+#deco-ball-2 {
+    top: 229px;
+    left: 147px;
+}
+
+#deco-ball-3 {
+    top: 240px;
+    left: 188px;
+}
+
+#deco-ball-4 {
+    top: 278px;
+    left: 132px;
+}
+
+#deco-ball-5 {
+    top: 310px;
+    left: 183px;
 }
